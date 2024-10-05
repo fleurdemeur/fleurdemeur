@@ -746,7 +746,7 @@ tr:nth-child(even) {
     #hero {
         padding: 0 20px;
         background-position: 55%;
-        background: url(./Images/WebBG.png);
+        background: url(./Images/Web\ Flowers\ BG.png);
         text-align: center;
         display: flex;
         flex-direction: column;
