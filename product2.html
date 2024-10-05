@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fleur De Meur | Alpin Frais</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+    <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="./Images/Yes.png">
+</head>
+<body>
+    <section id="header">
+
+        <a href="#" class="logo" onclick="document.location='index.html'">FLEUR DE MEUR<span>.</span></a>
+
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="#" id="nav-products">Products</a></li>
+                <li><a href="index.html#sm-banner">Deals</a></li>
+                <li><a href="#">Order</a></li>
+                <span class="material-symbols-outlined">filter_vintage</span>
+            </ul>
+        </div>
+        <div id="mobile">
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <div class="product-description">
+        <h2>Alpin Frais</h2>
+        <img src="Images/Solo Frais.png" alt="Product Image">
+        <p>
+            Escape to the crisp, clean air of the Alps with Alpin Frais, our refreshing ethyl alcohol infused with the invigorating scent of pine. This invigorating fragrance is perfect for those seeking a burst of energy and a moment of clarity.
+<br>
+<br>
+Formulated with 70% ethyl alcohol, Alpin Frais effectively kills germs while being gentle on your skin. The crisp scent of pine is non-irritating and suitable for all skin types, even the most sensitive.
+<br>
+<br>
+Our convenient packaging makes it easy to carry Alpin Frais wherever you go. Whether you're on the go, at home, or in the office, this refreshing hand sanitizer is always within reach.
+<br>
+<br>
+Experience the invigorating freshness of Alpin Frais and let the crisp scent of pine transport you to the breathtaking beauty of the Alps.
+<br>
+        </p>
+
+        <h3>Features:</h3>
+        <ul>
+            <li>Effective hand hygiene: Formulated with ethyl alcohol for that best germ-killing power</li>
+            <li>Gentle on skin: Suitable for all skin types</li>
+            <li>Invigorating and refreshing: The crisp scent of pine awakens your senses and leaves you feeling refreshed and energized.</li>
+        </ul>
+<br>
+        <h3>Specifications:</h3>
+        <table>
+            <tr>
+                <th>Property</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Volume</td>
+                <td>Available in 30ml | 100ml</td>
+            </tr>
+            <tr>
+                <td>Alcohol Content</td>
+                <td>85% Ethyl Alcohol</td>
+            </tr>
+            <tr>
+                <td>Scent</td>
+                <td>Woody, Musky</td>
+            </tr>
+            <tr>
+                <td>Usage</td>
+                <td>Apply small amount to your hands and rub together gently.</td>
+            </tr>
+            </table>
+            
+            <div class="product-selection">
+                <select id="product-size">
+                    <option value="">Select size</option>
+                    <option value="30">30ml</option>
+                    <option value="100">100ml</option>
+                </select>
+                <p id="price-display" style="display: none;">Selected Price: <span id="selected-price"></span></p>
+            </div>
+
+        <button disabled>Pre-Order Coming Soon</button>
+    </div>
+
+    <footer class="section-p1">
+        <div class="social">
+            <a href=""><i class="fab fa-facebook-f"></i></a>
+            <a href=""><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/fleur.de.meur/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href=""><i class="fab fa-youtube"></i></a>
+        </div>
+        <ul class="list">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="index.html#product1">Products</a>
+            </li>
+            <li>
+                <a href="index.html#sm-banner">Deals</a>
+            </li>
+            <li>
+                <a href="index.html#banner">Order</a>
+            </li>
+        </ul>
+            <div class="copyright">
+                <p>©2024, Fleur De Meur</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('product-size').addEventListener('change', function() {
+            var priceDisplay = document.getElementById('price-display');
+            var selectedPrice = document.getElementById('selected-price');
+            
+            if (this.value) {
+                var price;
+                switch(this.value) {
+                    case '30':
+                        price = '₱49.9';
+                        break;
+                    case '100':
+                        price = '₱79.9';
+                        break;
+                    default:
+                        price = '';
+                }
+                selectedPrice.textContent = price;
+                priceDisplay.style.display = 'block';
+            } else {
+                priceDisplay.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
