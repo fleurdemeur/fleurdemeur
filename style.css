@@ -542,6 +542,7 @@ tr:nth-child(even) {
 
 .carousel {
     position: relative;
+    width: 100%;
     overflow: hidden;
 }
 
@@ -551,8 +552,8 @@ tr:nth-child(even) {
 }
 
 .carousel-slide {
-    min-width: 100%;
-    transition: 0.5s;
+    flex: 0 0 100%;
+    width: 100%;
 }
 
 .carousel-button {
@@ -564,14 +565,33 @@ tr:nth-child(even) {
     border: none;
     padding: 10px;
     cursor: pointer;
+    z-index: 10;
 }
 
-.prev {
+.carousel-button.prev {
     left: 10px;
 }
 
-.next {
+.carousel-button.next {
     right: 10px;
+}
+
+.iframe-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 175%; /* This creates a 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+    max-width: 640px; /* Maximum width of the iframe */
+    margin: 0 auto; /* Center the container */
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 /* Responsive Styles */
@@ -624,14 +644,6 @@ tr:nth-child(even) {
 
     #product1 .pro {
         margin: 15px;
-    }
-
-    #sm-banner .banner-box {
-        min-width: 100%;
-    }
-
-    #sm-banner .banner-box2 {
-        margin-top: 20px;
     }
 }
 
@@ -704,16 +716,31 @@ tr:nth-child(even) {
         padding-bottom: 0;
     }
 
-    #sm-banner .banner-box {
-        height: 40vh;
-        width: 69%;
-        min-width: 0;
-        background-size: cover;
-        text-align: left;
+    .carousel-button {
+        font-size: 16px;
+        padding: 8px;
     }
 
-    #sm-banner .banner-box2 {
-        margin-top: 20px;
+    #sm-banner .banner-box {
+        height: 30vh;
+        padding: 30px;
+    }
+
+    #sm-banner h2 {
+        font-size: 28px;
+    }
+
+    #sm-banner h4 {
+        font-size: 18px;
+    }
+
+    #sm-banner span {
+        font-size: 14px;
+    }
+
+    #sm-banner .banner-box button {
+        padding: 10px 20px;
+        font-size: 14px;
     }
 
     footer .copyright {
@@ -790,14 +817,31 @@ tr:nth-child(even) {
         font-size: 40px;
     }
 
+    .carousel-button {
+        font-size: 14px;
+        padding: 6px;
+    }
+
     #sm-banner .banner-box {
-        height: 40vh;
-        width: 40%;
-        min-width: 0;
+        height: 25vh;
+        padding: 20px;
     }
 
     #sm-banner h2 {
-        font-size: 40px;
+        font-size: 24px;
+    }
+
+    #sm-banner h4 {
+        font-size: 16px;
+    }
+
+    #sm-banner span {
+        font-size: 12px;
+    }
+
+    #sm-banner .banner-box button {
+        padding: 8px 15px;
+        font-size: 12px;
     }
 
     footer {
