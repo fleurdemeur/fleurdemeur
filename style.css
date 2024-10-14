@@ -391,6 +391,38 @@ body {
     border-color: #137345;
 }
 
+#demo {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+#demo .order-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #088178;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+#demo .order-link:hover {
+    background-color: #066a63;
+}
+
+@media screen and (max-width: 768px) {
+    #demo {
+        font-size: 1.5rem;
+    }
+
+    #demo .order-link {
+        padding: 8px 16px;
+        font-size: 1rem;
+    }
+}
+
 footer {
     padding: 40px 80px;
 }
